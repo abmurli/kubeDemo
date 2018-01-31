@@ -16,6 +16,7 @@ pipeline {
                   sh 'ls /var/lib/jenkins/workspace/kubeDemo_master-T5WCNAFFAGLTBLHBKLISKXINTVQSKIVQBF5MPWR6JW5XKPZ666NQ'
                   sh '''
                   cd /var/lib/jenkins/workspace/kubeDemo_master-T5WCNAFFAGLTBLHBKLISKXINTVQSKIVQBF5MPWR6JW5XKPZ666NQ/script/
+                  chmod 777 example.sh
                   ./example.sh
                  '''
       }
