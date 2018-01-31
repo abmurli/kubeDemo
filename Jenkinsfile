@@ -1,9 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+  stage('Build') {
+    steps {
+      checkout scm
+      sh 'pwd'
+      sh './example.sh'
+              }
+      
+    }
+    stage('inside Script') {
       steps {
-        checkout scm
         dir('kubeDemo/script') {
                   sh 'pwd'
           
@@ -15,6 +22,5 @@ pipeline {
         
       }
     }
-    
-  }
+}
 }
