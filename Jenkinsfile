@@ -12,15 +12,12 @@ pipeline {
     }
     stage('inside Script') {
       steps {
-        dir('kubeDemo/script') {
                   sh 'pwd'
-          
+                  sh 'ls /var/lib/jenkins/workspace/kubeDemo_master-T5WCNAFFAGLTBLHBKLISKXINTVQSKIVQBF5MPWR6JW5XKPZ666NQ'
                   sh '''
                   cd /var/lib/jenkins/workspace/kubeDemo_master-T5WCNAFFAGLTBLHBKLISKXINTVQSKIVQBF5MPWR6JW5XKPZ666NQ/kubeDemo/script/
                   ./example.sh
-                  '''
-                }
-        
+                 '''
       }
     }
 }
