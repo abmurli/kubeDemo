@@ -5,6 +5,7 @@ pipeline {
     steps {
       checkout scm
       sh 'pwd'
+      sh 'chmod 777 example.sh'
       sh './example.sh'
               }
       
